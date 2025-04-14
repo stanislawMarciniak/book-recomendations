@@ -13,3 +13,4 @@ ipywidgets
 tensorflow
 tqdm
 tf-keras
+flask
