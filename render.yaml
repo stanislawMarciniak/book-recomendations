@@ -3,7 +3,6 @@ services:
     name: book-recommendation
     env: docker
     plan: free
-    autodeploy: false
     branch: main
     dockerfilePath: Dockerfile
     envVars:
