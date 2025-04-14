@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: semantic-book-dashboard
+    name: book-recommendation
     env: docker
     plan: free
     autodeploy: false
