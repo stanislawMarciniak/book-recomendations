@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: semantic-book-dashboard
+    env: docker
+    plan: free
+    autodeploy: false
+    branch: main
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: OPENAI_API_KEY
+        from: secret:OPENAI_API_KEY

@@ -1,0 +1,4 @@
+*.ipynb
+notebooks/
+*.csv
+!books_with_emotions.csv
