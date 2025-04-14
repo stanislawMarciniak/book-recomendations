@@ -14,3 +14,4 @@ tensorflow
 tqdm
 tf-keras
 flask
+gunicorn
