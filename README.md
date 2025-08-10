@@ -5,6 +5,7 @@ A sophisticated book recommendation system that uses machine learning to classif
 ## Overview
 
 This project creates an intelligent book recommendation system by combining multiple AI techniques:
+
 - **Text Classification**: Automatically categorizes books as Fiction/Nonfiction
 - **Emotion Analysis**: Extracts emotional profiles from book descriptions
 - **Semantic Search**: Enables natural language queries using vector embeddings
@@ -21,6 +22,7 @@ This project creates an intelligent book recommendation system by combining mult
 ## Demo
 
 The system accepts queries like:
+
 - "A story about forgiveness and redemption"
 - "Books to teach children about nature"
 - "Mystery novels set in Victorian England"
@@ -30,7 +32,8 @@ The system accepts queries like:
 
 **Source**: Kaggle books dataset (6,810+ books)  
 **Final Dataset**: 5,197 high-quality books after cleaning and filtering  
-**Features**: 
+**Features**:
+
 - Book metadata (title, authors, ratings, publication info)
 - Automatically generated categories
 - Emotional profiles (7 dimensions: joy, anger, fear, sadness, surprise, disgust, neutral)
@@ -41,18 +44,21 @@ The system accepts queries like:
 ### Data Processing Pipeline
 
 1. **Data Exploration & Cleaning** (`data-exploration.ipynb`)
+
    - Downloaded and analyzed Kaggle dataset
    - Removed books with missing critical data
    - Filtered for descriptions with 25+ words
    - Created enhanced features and saved as `books_cleaned.csv`
 
 2. **Text Classification** (`text-classification.ipynb`)
+
    - Used Facebook's BART-large-mnli for zero-shot classification
    - Achieved 77.8% accuracy on Fiction vs. Nonfiction classification
    - Applied to 1,454 books missing category labels
    - Output: `books_with_categories.csv`
 
 3. **Emotion Analysis** (`sentiment-analysis.ipynb`)
+
    - Applied DistilRoBERT model for emotion classification
    - Analyzed 7 emotion categories across all book descriptions
    - Sentence-level analysis with maximum score aggregation
@@ -73,6 +79,7 @@ The system accepts queries like:
 ## Installation
 
 ### Prerequisites
+
 - Python 3.9+
 - OpenAI API key
 - Required packages (see `requirements.txt`)
@@ -80,17 +87,20 @@ The system accepts queries like:
 ### Setup
 
 1. **Clone the repository**
+
 ```bash
 git clone git@github.com:stanislawMarciniak/book-recomendations.git
 cd book-recomendations
 ```
 
 2. **Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. **Set up environment variables**
+
 ```bash
 # Create .env file
 echo "OPENAI_API_KEY=your_openai_api_key_here" > .env
@@ -99,6 +109,7 @@ echo "OPENAI_API_KEY=your_openai_api_key_here" > .env
 ### Running the Application
 
 **Local Development**
+
 ```bash
 python gradio-dashboard.py
 ```
